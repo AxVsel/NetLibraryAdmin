@@ -1,10 +1,10 @@
 ﻿
 # yang harus di instal
 1. visual studio 2019
-2. crystal report for visual studio 2019
+2. crystal report for visual studio 2019 link download 'https://drive.google.com/u/0/uc?export=download&confirm=s1Q-&id=1GLciwXfE9kICSeLC0wUbZGljZYJGm17U'
 3. mysql/mariaDB database
 4. mysql odbc
-5. mysql connector net 6.5.4
+5. mysql connector net 6.5.4 link download 'https://dev.mysql.com/downloads/file/?id=507767'
 6. .net framework 4.7.2 ke atas
 
 # cara install
