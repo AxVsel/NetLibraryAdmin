@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44B60198-7474-479A-890B-94D3436F1241}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NetLibraryAdmin</RootNamespace>
+    <AssemblyName>NetLibraryAdmin</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.EntityFramework, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlXml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="administrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="administrator.Designer.cs">
+      <DependentUpon>administrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="beranda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="beranda.Designer.cs">
+      <DependentUpon>beranda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buku.Designer.cs">
+      <DependentUpon>buku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buku_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buku_form.Designer.cs">
+      <DependentUpon>buku_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cetak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cetak.Designer.cs">
+      <DependentUpon>cetak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="db.cs" />
+    <Compile Include="form_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_login.Designer.cs">
+      <DependentUpon>form_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lib.cs" />
+    <Compile Include="member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member.Designer.cs">
+      <DependentUpon>member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="member_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member_form.Designer.cs">
+      <DependentUpon>member_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\buku.cs" />
+    <Compile Include="model\general.cs" />
+    <Compile Include="model\member.cs" />
+    <Compile Include="model\pegawai.cs" />
+    <Compile Include="model\peminjaman.cs" />
+    <Compile Include="model\pengembalian.cs" />
+    <Compile Include="model\rak_buku.cs" />
+    <Compile Include="model\statistik.cs" />
+    <Compile Include="paging.cs" />
+    <Compile Include="pegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pegawai.Designer.cs">
+      <DependentUpon>pegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pegawai_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pegawai_form.Designer.cs">
+      <DependentUpon>pegawai_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="peminjaman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="peminjaman.Designer.cs">
+      <DependentUpon>peminjaman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="peminjaman_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="peminjaman_form.Designer.cs">
+      <DependentUpon>peminjaman_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pengembalian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pengembalian.Designer.cs">
+      <DependentUpon>pengembalian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pengembalian_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pengembalian_form.Designer.cs">
+      <DependentUpon>pengembalian_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="profile_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="profile_form.Designer.cs">
+      <DependentUpon>profile_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rak_buku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rak_buku.Designer.cs">
+      <DependentUpon>rak_buku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rak_buku_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rak_buku_form.Designer.cs">
+      <DependentUpon>rak_buku_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\peminjaman.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\peminjaman1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>peminjaman.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\pengembalian.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\pengembalian1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pengembalian.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="statistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="statistik.Designer.cs">
+      <DependentUpon>statistik.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="administrator.resx">
+      <DependentUpon>administrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="beranda.resx">
+      <DependentUpon>beranda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buku.resx">
+      <DependentUpon>buku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buku_form.resx">
+      <DependentUpon>buku_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cetak.resx">
+      <DependentUpon>cetak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_login.resx">
+      <DependentUpon>form_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member.resx">
+      <DependentUpon>member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member_form.resx">
+      <DependentUpon>member_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pegawai.resx">
+      <DependentUpon>pegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pegawai_form.resx">
+      <DependentUpon>pegawai_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="peminjaman.resx">
+      <DependentUpon>peminjaman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="peminjaman_form.resx">
+      <DependentUpon>peminjaman_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pengembalian.resx">
+      <DependentUpon>pengembalian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pengembalian_form.resx">
+      <DependentUpon>pengembalian_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profile_form.resx">
+      <DependentUpon>profile_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rak_buku.resx">
+      <DependentUpon>rak_buku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rak_buku_form.resx">
+      <DependentUpon>rak_buku_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\peminjaman.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>peminjaman1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\pengembalian.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>pengembalian1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="statistik.resx">
+      <DependentUpon>statistik.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sebelumdiinsstal\Buktifiturcetak.png" />
+    <Content Include="sebelumdiinsstal\Buktifiturcetak2.png" />
+    <Content Include="sebelumdiinsstal\netbook.sql" />
+    <None Include="Resources\user1.png" />
+    <None Include="Resources\garbage.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\floppy-disk.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\book.png" />
+    <None Include="Resources\books.png" />
+    <None Include="Resources\borrow.png" />
+    <None Include="Resources\book %281%29.png" />
+    <None Include="Resources\freelance.png" />
+    <None Include="Resources\about.png" />
+    <None Include="Resources\exit %281%29.png" />
+    <None Include="Resources\diskette.png" />
+    <None Include="Resources\cancel %281%29.png" />
+    <None Include="Resources\edit %281%29.png" />
+    <None Include="Resources\Asset 8.png" />
+    <None Include="Resources\Asset 81.png" />
+    <None Include="Resources\Asset 7.png" />
+    <None Include="Resources\Asset 6.png" />
+    <None Include="Resources\Asset 5.png" />
+    <None Include="Resources\Asset 4.png" />
+    <None Include="Resources\Asset 3.png" />
+    <None Include="Resources\Asset 2.png" />
+    <None Include="Resources\Asset 1.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\back1.png" />
+    <None Include="Resources\book-stack.png" />
+    <None Include="Resources\employee.png" />
+    <None Include="Resources\book %281%291.png" />
+    <None Include="Resources\edit1.png" />
+    <None Include="Resources\delete1.png" />
+    <None Include="Resources\book1.png" />
+    <None Include="Resources\floppy-disk1.png" />
+    <None Include="Resources\edit2.png" />
+    <None Include="Resources\freelance1.png" />
+    <None Include="Resources\freelance2.png" />
+    <None Include="Resources\borrow1.png" />
+    <None Include="Resources\book %281%292.png" />
+    <None Include="Resources\borrow2.png" />
+    <None Include="Resources\floppy-disk2.png" />
+    <None Include="Resources\cancel %281%291.png" />
+    <None Include="Resources\borrow3.png" />
+    <None Include="Resources\freelance3.png" />
+    <None Include="Resources\books1.png" />
+    <None Include="Resources\edit3.png" />
+    <None Include="Resources\floppy-disk3.png" />
+    <None Include="Resources\books2.png" />
+    <Content Include="sebelumdiinsstal\bacasebeluminsstal.txt" />
+    <Content Include="Resources\graphic-3739600_640.png" />
+    <None Include="Resources\group.png" />
+    <None Include="Resources\group1.png" />
+    <None Include="Resources\group2.png" />
+    <Content Include="Resources\hapus.png" />
+    <None Include="Resources\house.png" />
+    <None Include="Resources\house1.png" />
+    <Content Include="Resources\icon-buku.png" />
+    <None Include="Resources\inferential-statistics.png" />
+    <None Include="Resources\inferential-statistics1.png" />
+    <Content Include="Resources\lock.png" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\next-button.png" />
+    <None Include="Resources\next-button1.png" />
+    <None Include="Resources\logout.png" />
+    <Content Include="Resources\next.png" />
+    <None Include="Resources\plus-sign.png" />
+    <None Include="Resources\pencil.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\plus1.png" />
+    <None Include="Resources\plus2.png" />
+    <None Include="Resources\plus3.png" />
+    <None Include="Resources\plus4.png" />
+    <None Include="Resources\plus5.png" />
+    <None Include="Resources\notes.png" />
+    <None Include="Resources\notes1.png" />
+    <None Include="Resources\plus6.png" />
+    <Content Include="Resources\prev.png" />
+    <None Include="Resources\reset.png" />
+    <None Include="Resources\previous.png" />
+    <None Include="Resources\preview.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\previous1.png" />
+    <None Include="Resources\reset1.png" />
+    <None Include="Resources\signing.png" />
+    <None Include="Resources\printer1.png" />
+    <None Include="Resources\reset2.png" />
+    <None Include="Resources\search1.png" />
+    <Content Include="Resources\simpan.png" />
+    <Content Include="Resources\tambah.png" />
+    <None Include="Resources\team.png" />
+    <Content Include="Resources\update.png" />
+    <Content Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
